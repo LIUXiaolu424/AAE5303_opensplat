@@ -269,7 +269,25 @@ end_header
 
 ### C. JSON metrics
 
-See **`output/training_report.json`** (same numbers as the Executive Summary tables).
+Can be seen **`output/training_report.json
+{
+  "training_summary": {
+    "total_steps": 3000,
+    "total_images": 300,
+    "num_gaussians": 165253,
+    "initial_loss": 0.295365,
+    "final_loss": 0.120293,
+    "min_loss": 0.031545,
+    "max_loss": 0.350847,
+    "mean_loss": 0.139235,
+    "std_loss": 0.046719,
+    "loss_reduction_pct": 59.27
+  },
+  "estimated_metrics": {
+    "psnr_estimate": 21.5,
+    "ssim_estimate": 0.79
+  }
+}`** (same numbers as the Executive Summary tables).
 
 ---
 
