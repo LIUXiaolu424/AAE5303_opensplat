@@ -1,0 +1,18 @@
+{
+  "_comment": "与 training_report.json 配套说明，勿直接替换仓库内 output/training_report.json，除非课程允许扩展字段",
+  "gaussian_count_explanation": "training_report.json 中的 num_gaussians 取推荐提交用的 checkpoint：amtown02_n7000_3000.ply（约 166220 个高斯、约 40MB）。第 7000 步最终文件 amtown02_n7000.ply 因裁剪仅剩约 3041 个高斯，观感通常不如 3000 步 checkpoint。",
+  "data_pipeline": {
+    "ros_bag": "AMtown02.bag",
+    "colmap_training_images": 300,
+    "bag_stride": 25,
+    "sfm": "COLMAP feature_extractor + sequential_matcher + mapper",
+    "opensplat_input_images": "images_half（原图 0.5×，避免 CPU 内存 OOM）",
+    "device": "CPU",
+    "thread_env": "OMP_NUM_THREADS=4 MKL_NUM_THREADS=4"
+  },
+  "recommended_files_for_submission": [
+    "training_runs/amtown02_n7000_3000.ply",
+    "training_runs/log_n7000.txt",
+    "training_runs/cameras.json"
+  ]
+}
